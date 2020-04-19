@@ -25,5 +25,19 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "google data",
+      "urls": [
+        "https://spreadsheets.google.com/feeds/cells/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "7d",
+        "timeout": "30u",
+        "strategy": "freshness"
+      }
+    }
   ]
 }
