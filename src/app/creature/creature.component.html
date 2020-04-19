@@ -1,5 +1,8 @@
 <div class="creature" [ngClass]="{'creature-type__bird': data.category == 'bird', 'creature-type__fanged': data.category == 'fanged'}" *ngIf="!!data">
-    <img [src]="data.imgPath" [alt]="data.name" />
+    <div class="creature__image">
+
+        <img [src]="data.imgPath" [alt]="data.name" />
+    </div>
     <h3>{{ data.name }}</h3>
 
 
