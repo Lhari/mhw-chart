@@ -13,8 +13,8 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.0.0 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_TOKEN}}
-          heroku_app_name: "" #Must be unique in Heroku
-          heroku_email: ""
+          heroku_app_name: "mhw-chart" #Must be unique in Heroku
+          heroku_email: "kashan7@live.dk"
           buildpack: "SOME BUILDPACK" #OPTIONAL
           branch: "master" #OPTIONAL and DEFAULT - 'HEAD' (a.k.a your current branch)
           dontuseforce: false #OPTIONAL and DEFAULT - false
