@@ -1,0 +1,48 @@
+.creature {
+
+
+    img {
+    }
+
+    text-align: center;
+
+    &__stats {
+
+        display: flex;
+        flex-direction: column;
+
+        &.no-states {
+            padding-top: 23px;
+        }
+
+        .states {
+
+            .state {
+                margin-bottom: 5px;
+            }
+        }
+
+        .split-elements, .states {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+        }
+
+    }
+}
+
+
+.creature-type {
+
+    &__bird {
+
+        img {
+
+            background-color: cyan;
+        }
+    }
+
+    &__fanged {
+
+    }
+}

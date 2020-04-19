@@ -1,0 +1,44 @@
+<div class="creature" [ngClass]="{'creature-type__bird': data.category == 'bird', 'creature-type__fanged': data.category == 'fanged'}" *ngIf="!!data">
+    <img [src]="data.imgPath" [alt]="data.name" />
+    <h3>{{ data.name }}</h3>
+
+
+    <div class="creature__stats" [ngClass]="{'no-states': !data.states}">
+
+        <ng-container *ngIf="!!data.states">
+    
+            <div class="states">
+    
+                <ng-container *ngFor="let state of data.states.split('|')">
+                    <span class="state">{{state}}</span>
+                </ng-container>
+
+            </div>
+        </ng-container>
+    
+        <ng-container *ngFor="let element of elements">
+    
+            <ng-container *ngIf="!!data[element] && data[element].includes('|'); else static">
+                
+                <div class="split-elements">
+    
+                    <ng-container *ngFor="let splitElement of data[element].split('|')">
+        
+                        <app-status [symbol]="element" [value]="splitElement"></app-status>
+                    </ng-container>
+                </div>
+    
+                
+            </ng-container>
+    
+            <ng-template #static>
+    
+                <div class="element">
+    
+                    <app-status [symbol]="element" [value]="data[element]"></app-status>
+                </div>
+                
+            </ng-template>
+        </ng-container>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mhw-weakness-scheme';
+  data: any
+  constructor(
+    private _dataService: DataService
+  ) {
+    this._dataService.getData().subscribe((data) => {
+
+      this.data = Array.from(data.entries())
+    })
+  }
 }
