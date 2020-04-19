@@ -1,1 +1,8 @@
-<p [class]="symbol" [ngClass]="{'immune': isNumber(value) > 0 ? false : true, 'weakness--1': value == '1', 'weakness--2': value == '2', 'weakness--3': value == '3'}"></p>
+<!-- <img [src]="'./assets/' + symbol + '.png'" /> -->
+<p [class]="symbol" [ngClass]="{'immune': isNumber(value) > 0 ? false : true}">
+    <ng-container *ngFor="let icon of icons(value)">
+        <span class="symbol-container">
+            <img [src]="'./assets/' + symbol + '.png'" />
+        </span>
+    </ng-container>
+</p>

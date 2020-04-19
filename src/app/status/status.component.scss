@@ -14,21 +14,28 @@ p {
     }
 }
 
+.symbol-container {
+    img {
+        width: 20px;
+        height: auto;
+    }
+}
+
 // Colors for the different elements, that uses static icons
 .fire {
-    background: orange;
+    background: rgba(#a4575d, 0.3);
 }
 .water {
-    background: blue;
+    background: rgba(#7391ab, 0.3);
 }
 .thunder {
-    background: yellow;
+    background: rgba(#b6ab69, 0.3);
 }
 .ice {
-    background: lightblue;
+    background: rgba(#7dabab, 0.3);
 }
 .dragon {
-    background: purple;
+    background: rgba(#523e7d, 0.3);
 }
 
 .immune {
