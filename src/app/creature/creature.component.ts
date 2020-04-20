@@ -30,8 +30,6 @@ export class CreatureComponent implements OnInit {
     for(let key of Object.keys(this.headers)) [
       this.data[this.headers[key]] = localCreature[key]
     ]
-
-    console.log(this.data)
   }
 
 }
